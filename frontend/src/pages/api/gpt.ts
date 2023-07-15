@@ -23,7 +23,7 @@ export default async function handler(
     คำถามคือ ${messages[0].content}`
   }
 
-  console.log(messages)
+  // console.log(messages)
 
   const aiResponse = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
