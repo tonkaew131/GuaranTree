@@ -84,8 +84,8 @@ const NewCard = () => {
           />
         </div>
       </div>
-      <Button className="flex w-full h-[72px] bg-[#67BE4D] mt-[16px] text-[23px]">
-        ตรวจสอบวงเงินประกัน
+      <Button className="flex w-full h-[72px] bg-[#67BE4D] hover:bg-[#599b44] mt-[16px] text-[23px]">
+        <span className="text-[23px] font-[500]">ตรวจสอบวงเงินประกัน</span>
       </Button>
     </div>
   )
