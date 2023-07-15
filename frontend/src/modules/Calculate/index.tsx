@@ -6,6 +6,19 @@ import { CalculateAtom } from "./atom"
 
 const CalculatePage = () => {
   const [calculateAtom, setCalculateAtom] = useAtom(CalculateAtom)
+  // kg of carbon weight per tree (kg)
+  //   const carbonPerTree =
+  //     calculateAtom.age > 0 && calculateAtom.size > 0
+  //       ? Math.pow(2.3255 * calculateAtom.age, 1.785)
+  //       : 0
+  const carbonPerTree =
+    //   8.7429x - 3.58458.7637x - 1.2965
+    calculateAtom.age > 0 ? 8.7637 * calculateAtom.age - 1.2965 : 0
+  // kg of carbon weight per all in 1 field
+  const allCarbon = (carbonPerTree * 25) / 1000
+  console.log(allCarbon)
+  const carbonPrice = 450
+  const result = allCarbon * carbonPrice * calculateAtom.size
   return (
     <div className="flex w-full h-[100vh]">
       <div className="flex flex-col w-[500px] max-w-[90%] h-[600px] max-h-[90%] border-[1px] rounded-lg overflow-hidden absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] overflow-y-auto scrollbar-hide p-[20px] gap-[10px]">
@@ -45,6 +58,9 @@ const CalculatePage = () => {
         >
           Subscribe
         </Button>
+        <span>
+          money <b>{result.toFixed(0)}</b> per year
+        </span>
       </div>
     </div>
   )
