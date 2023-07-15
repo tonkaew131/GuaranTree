@@ -38,7 +38,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v4
         with:
-          context: ./${{ matrix.buildTarget }}
+          context: "{{defaultContext}}:${{ matrix.buildTarget }}"
           push: true
           tags: ghcr.io/webmastercamp/${{ github.event.repository.name }}-${{ matrix.buildTarget }}:latest
           cache-from: type=gha
