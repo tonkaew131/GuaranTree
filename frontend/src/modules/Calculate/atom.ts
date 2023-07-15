@@ -5,6 +5,6 @@ interface ICalculateAtom {
   age: number
 }
 export const CalculateAtom = atom<ICalculateAtom>({
-  size: 0,
-  age: 0,
+  size: 15,
+  age: 7,
 })
