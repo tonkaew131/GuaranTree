@@ -28,7 +28,7 @@ export default function Page() {
     <>
       {[1, 2].map((e) => {
         return (
-          <div className="py-4">
+          <div className="py-4" key={e}>
             <Skeleton className="w-[150px] h-[25px] rounded-full" />
             <Skeleton className="w-full aspect-[9/10] rounded-md mt-2" />
           </div>

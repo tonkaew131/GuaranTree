@@ -1,4 +1,6 @@
+import Helping from "@/components/landing/helping"
 import Hero from "@/components/landing/hero"
+import Sponsor from "@/components/landing/sponsor"
 import Link from "next/link"
 
 export default function Page() {
@@ -13,6 +15,8 @@ export default function Page() {
         </div>
       </div> */}
       <Hero />
+      <Helping />
+      <Sponsor />
     </>
   )
 }
