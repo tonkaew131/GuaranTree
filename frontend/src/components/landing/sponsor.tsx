@@ -28,7 +28,7 @@ export default function Sponsor() {
         และสนับสนุนจาก
       </h2>
 
-      <div className="font-Athiti font-medium text-black text-2xl p-2 relative py-8">
+      <div className="font-Athiti font-medium text-black text-2xl p-2 relative py-8 pt-[10px] pb-0">
         {/* <div className="mb-4 flex gap-4 overflow-clip -translate-x-[20px]">
           {sponsors.top.map((s) => (
             <div

@@ -2,33 +2,55 @@ import Card from "@/../public/images/card.webp"
 
 import Image from "next/image"
 
-export default function Helping() {
+export default function Helping({
+  scrollPosition,
+}: {
+  scrollPosition?: number
+}) {
   return (
-    <section className="font-Athiti text-center pb-16">
-      <div className="relative sm:flex -mb-6 sm:-mb-16 -z-10 ">
-        <Image
-          src={Card}
-          alt="Farmer"
-          className="rotate-[14deg] sm:rotate-0 sm:w-3/4 sm:max-h-[70vh] object-contain sm:mx-0 absolute sm:static scale-[0.6] sm:scale-100 -translate-y-[10%] sm:translate-y-0 translate-x-[10%] sm:translate-x-0 -z-10 sm:z-0"
-        />
-        <Image
-          src={Card}
-          alt="Farmer"
-          className="rotate-[-14deg] sm:rotate-0 sm:w-3/4 sm:max-h-[70vh] object-contain sm:mx-0 absolute sm:static scale-[0.6] sm:scale-100 -translate-y-[10%] sm:translate-y-0 translate-x-[-10%] sm:translate-x-0 -z-10 sm:z-0"
-        />
-        <Image
-          src={Card}
-          alt="Farmer"
-          className="w-3/5 mx-auto sm:mx-0 -z-10 max-h-[70vh] object-contain"
-        />
-      </div>
-
-      <div className="bg-white shadow-xl w-11/12 sm:w-fit sm:px-12 mx-auto rounded-md p-3 z-20">
-        <h2 className="font-semibold text-3xl text-ds-secondary ">
-          เราช่วยเกษตรกรชาวไทย
-          <br /> ไปแล้วมูลค่ากว่า
-        </h2>
-        <h3 className="font-bold text-ds-primary text-5xl pt-4">5,000 คน</h3>
+    <section className="font-Athiti text-center pb-16 relative">
+      <div className="relative w-full h-[300px]">
+        <div className="flex w-[200px] h-[260px] z-[10] absolute left-[50%] transform translate-x-[-50%] top-[0px]">
+          <Image
+            src="/images/Card1.png"
+            alt="Farmer"
+            className="object-cover"
+            fill
+          />
+        </div>
+        <div
+          className="flex w-[170px] h-[180px] z-[0] absolute left-[30%] top-[30px]"
+          style={{
+            transform: "rotate(-10deg) translate(-50%, -0%)",
+          }}
+        >
+          <Image
+            src="/images/Card2.png"
+            alt="Farmer"
+            className="object-cover"
+            fill
+          />
+        </div>
+        <div
+          className="flex w-[170px] h-[180px] z-[0] absolute left-[70%] top-[60px]"
+          style={{
+            transform: "rotate(10deg) translate(-50%, -0%)",
+          }}
+        >
+          <Image
+            src="/images/Card3.png"
+            alt="Farmer"
+            className="object-cover"
+            fill
+          />
+        </div>
+        <div className="bg-white shadow-xl w-[320px] px-[16px] py-[4px] rounded-md p-3 z-[50] absolute left-[50%] transform translate-x-[-50%] top-[200px]">
+          <h2 className="font-semibold text-[30px] text-ds-secondary ">
+            เราช่วยเกษตรกรชาวไทย
+            <br /> ไปแล้วมูลค่ากว่า
+          </h2>
+          <h3 className="font-bold text-ds-primary text-[42px]">5,000 คน</h3>
+        </div>
       </div>
     </section>
   )

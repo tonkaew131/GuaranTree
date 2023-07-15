@@ -20,7 +20,7 @@ const NewCard = () => {
         <span className="text-[#614215]">การัน</span>
         <span className="text-[#67BE4D]">Tree</span> มีให้ทดลอง
       </span>
-      <div className="h-[501px] w-full bg-white shadow-md text-center flex-col items-center p-[16px] flex">
+      <div className="h-[501px] w-full bg-white shadow-2xl text-center flex-col items-center p-[16px] flex">
         <span className="font-Athiti text-[26px] h-fit font-[600] text-[#614215]">
           ลองประเมิน<span className="text-[#67BE4D]">ผลตอบแทน</span>
           <br />
