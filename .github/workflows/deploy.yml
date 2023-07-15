@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        buildTarget: [frontend, backend]
+        buildTarget: [frontend]
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -47,4 +47,6 @@ jobs:
         with:
           image: ghcr.io/webmastercamp/${{ github.event.repository.name }}-${{ matrix.buildTarget }}@${{ steps.build-and-push.outputs.digest }}
           deploymentName: ${{ matrix.buildTarget }}
-          port: 3000
+          port: 8080
+          env:
+            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
