@@ -18,6 +18,7 @@ export default function Page() {
     PROVINCE_ID: number
   }
 
+  const [parcelId, setParcelId] = useState("")
   const [provinces, setProvinces] = useState<province[]>([])
   const [districts, setDistricts] = useState<district[]>([])
   const [filterDistricts, setFilterDistricts] = useState<district[]>([])
@@ -92,12 +93,13 @@ export default function Page() {
           <input
             className="px-2 py-4 border w-full mb-2"
             placeholder="เลขที่โฉนด"
+            onChange={(e) => setParcelId(e.target.value)}
           ></input>
         </div>
 
         <Link
-          href={`/search/map?province=${provinceId}&district=${districtId}`}
-          className="w-4/5"
+          href={`/search/map?province=${provinceId}&district=${districtId}&parcel=${parcelId}`}
+          className="w-4/5 max-w-sm"
         >
           <Button size={"lg"} className="w-full text-2xl py-8">
             ค้นหา
