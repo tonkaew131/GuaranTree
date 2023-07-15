@@ -48,5 +48,5 @@ jobs:
           image: ghcr.io/webmastercamp/${{ github.event.repository.name }}-${{ matrix.buildTarget }}@${{ steps.build-and-push.outputs.digest }}
           deploymentName: ${{ matrix.buildTarget }}
           port: 8080
-          env:
-            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
