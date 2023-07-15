@@ -21,7 +21,7 @@ export default function Sponsor() {
   }
 
   return (
-    <section className="font-Athiti w-full font-semibold text-ds-secondary text-4xl text-center border-red-500 border">
+    <section className="font-Athiti w-full font-semibold text-ds-secondary text-4xl text-center">
       <h2>
         ได้รับการรองรับ
         <br />
@@ -55,7 +55,7 @@ export default function Sponsor() {
           }}
         ></div> */}
 
-        <Image src={placeholder} alt="Sponsor Section"/>
+        <Image src={placeholder} alt="Sponsor Section" />
       </div>
     </section>
   )
