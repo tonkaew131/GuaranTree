@@ -19,6 +19,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        Mitr: ["Mitr", "sans-serif"],
+      },
       colors: {
         'ds-primary': "#128C12",
         border: "hsl(var(--border))",
