@@ -10,18 +10,25 @@ export default function Page() {
 
   return (
     <>
+      <div className="bg-">
+        <p>Smart Assistance</p>
+      </div>
       <p className="">
-        {messages.map((message, i) => (
-          <div key={i} className="py-4">
-            {message.content.split("\n").map((m) => (
-              <p>{m}</p>
-            ))}
-          </div>
-        ))}
+        {messages.map((message, i) => {
+          const lines = message.content.split("\n")
+
+          return (
+            <div key={i} className="py-4">
+              {lines.map((m, idx) => (
+                <p key={idx}>{m}</p>
+              ))}
+            </div>
+          )
+        })}
       </p>
       <form
         onSubmit={handleSubmit}
-        className="absolute bottom-2 p-2 left-1/2 -translate-x-1/2"
+        className="absolute bottom-2 p-2 left-1/2 -translate-x-1/2 w-full"
       >
         <label htmlFor="input">Prompt</label>
         <div className="flex gap-2">
@@ -31,7 +38,7 @@ export default function Page() {
             onChange={handleInputChange}
             id="input"
             autoComplete="off"
-            className="bg-zinc-100 rounded-2xl border-2 px-8 p-4 w-[91vh]"
+            className="bg-zinc-100 rounded-2xl border-2 px-8 p-4 w-11/12"
           />
           <button
             type="submit"

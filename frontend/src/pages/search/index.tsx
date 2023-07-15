@@ -18,12 +18,12 @@ export default function Page() {
     PROVINCE_ID: number
   }
 
-  const [parcelId, setParcelId] = useState("")
+  const [parcelId, setParcelId] = useState<number>(0)
   const [provinces, setProvinces] = useState<province[]>([])
   const [districts, setDistricts] = useState<district[]>([])
   const [filterDistricts, setFilterDistricts] = useState<district[]>([])
-  const [provinceId, setProvinceId] = useState("")
-  const [districtId, setDistrictId] = useState("")
+  const [provinceId, setProvinceId] = useState<string>("")
+  const [districtId, setDistrictId] = useState<string>("")
 
   const getProvinces = async () => {
     const res = await fetch("/provinces.json")
@@ -34,7 +34,7 @@ export default function Page() {
 
     setProvinces(json)
     setDistricts(json2)
-    setFilterDistricts(json2.filter((d) => d.PROVINCE_ID == 3))
+    setFilterDistricts(json2.filter((d: district) => d.PROVINCE_ID == 3))
   }
 
   useEffect(() => {
@@ -93,12 +93,14 @@ export default function Page() {
           <input
             className="px-2 py-4 border w-full mb-2"
             placeholder="เลขที่โฉนด"
-            onChange={(e) => setParcelId(e.target.value)}
+            onChange={(e) => setParcelId(Number(e.target.value))}
           ></input>
         </div>
 
         <Link
-          href={`/search/map?province=${provinceId}&district=${districtId}&parcel=${parcelId}`}
+          href={`/search/map?province=${provinceId}&district=${districtId}&parcel=${
+            parcelId % 3
+          }`}
           className="w-4/5 max-w-sm"
         >
           <Button size={"lg"} className="w-full text-2xl py-8">

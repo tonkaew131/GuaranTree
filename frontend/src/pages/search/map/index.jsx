@@ -5,7 +5,7 @@ import TileWMS from "ol/source/TileWMS.js"
 import View from "ol/View.js"
 import XYZ from "ol/source/XYZ"
 
-import MapContext from "./MapContext"
+import MapContext from "../../../modules/MapContext"
 import { useEffect, useRef, useState } from "react"
 
 import { useRouter } from "next/router"
@@ -20,9 +20,9 @@ export default function Page() {
   const router = useRouter()
 
   const sampleLocations = {
-    128: [11132520, 1547500],
-    349: [11332720, 1550400],
-    12: [11132520, 1547500],
+    0: [11132520, 1547500],
+    1: [11332720, 1550400],
+    2: [11132520, 1547500],
   }
 
   useEffect(() => {
