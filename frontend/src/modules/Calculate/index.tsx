@@ -12,12 +12,17 @@ const CalculatePage = () => {
   //       ? Math.pow(2.3255 * calculateAtom.age, 1.785)
   //       : 0
   const carbonPerTree =
-    //   8.7429x - 3.58458.7637x - 1.2965
-    calculateAtom.age > 0 ? 8.7637 * calculateAtom.age - 1.2965 : 0
+    //   78.56374431365006 / (1 + 16.986323367601884 * exp(0.644244077212348 * x))
+    // calculateAtom.age > 0 ? 8.7637 * calculateAtom.age - 1.2965 : 0
+    calculateAtom.age > 0
+      ? 78.56374431365006 /
+        (1 +
+          16.986323367601884 * Math.exp(-0.644244077212348 * calculateAtom.age))
+      : 0
   // kg of carbon weight per all in 1 field
-  const allCarbon = (carbonPerTree * 25) / 1000
+  const allCarbon = (carbonPerTree * 30) / 1000
   console.log(allCarbon)
-  const carbonPrice = 450
+  const carbonPrice = 505
   const result = allCarbon * carbonPrice * calculateAtom.size
   return (
     <div className="flex w-full h-[100vh]">
