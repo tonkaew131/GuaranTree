@@ -8,6 +8,10 @@ on:
       - .github/workflows/backend.yml
       - backend/**
 
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
 jobs:
   docker:
     name: ${{ matrix.buildTarget }}
