@@ -20,7 +20,7 @@ export default function Helping() {
           เราช่วยเกษตรกรชาวไทย
           <br /> ไปแล้วมูลค่ากว่า
         </h2>
-        <h3 className="font-bold text-ds-primary text-5xl ">5,000 คน</h3>
+        <h3 className="font-bold text-ds-primary text-5xl pt-4">5,000 คน</h3>
       </div>
     </section>
   )
