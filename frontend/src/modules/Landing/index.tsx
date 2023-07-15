@@ -1,9 +1,10 @@
 import Image from "next/image"
+import NewCard from "../Calculate/newcard"
 
 const Landing = () => {
   return (
     <div className="flex flex-col w-full h-fit">
-      <span className="text-[32px]">วิธีการเคลมประกัน</span>
+      {/* <span className="text-[32px]">วิธีการเคลมประกัน</span>
       <span className="text-[14px] mt-[8px]">
         อธิบายวิธีการเคลมประกัน e.g. ไม่ว่าคุณจะเกิดอุบัติเหตน้ำท่วม
         ผู้เชี่ยวชาญด้านการเคลมประกันของเรา พร้อมดูแลคุณทุกที่ ทุกเวลาตลอด 24
@@ -19,7 +20,8 @@ const Landing = () => {
           layout="fill"
           objectFit="contain"
         />
-      </div>
+      </div> */}
+      <NewCard />
     </div>
   )
 }

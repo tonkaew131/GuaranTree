@@ -16,7 +16,7 @@ import Image from "next/image"
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className="min-h-screen">
-      <div className="flex w-full h-[64px] items-center justify-center px-[24px]">
+      <div className="flex w-full h-[64px] items-center justify-center px-[24px] fixed top-0 z-[10] bg-white">
         <div className="mr-auto">
           <Image
             src="/images/ct-b-down.png"
@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </Button>
         <Navbar />
       </div>
-      <div className="w-full h-full max-w-[500px] mx-auto px-[20px] pt-[10px]">
+      <div className="w-full h-full max-w-[500px] mx-auto pt-[74px]">
         <Component {...pageProps} />
       </div>
     </div>
