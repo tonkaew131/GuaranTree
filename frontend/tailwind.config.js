@@ -21,11 +21,11 @@ module.exports = {
     extend: {
       fontFamily: {
         Mitr: ["Mitr", "sans-serif"],
-        Athiti: ["Athiti", "sans-serif"]
+        Athiti: ["Athiti", "sans-serif"],
+        BaiJamjuree: ["Bai Jamjuree", "sans-serif"],
       },
       colors: {
-        'ds-primary': "#128C12",
-        'ds-secondary': '#614215',
+        "ds-primary": "#128C12",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

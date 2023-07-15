@@ -2,7 +2,14 @@ import Image from "next/image"
 
 const Land = ({ size }: { size: number }) => {
   return (
-    <div className="flex w-[450px] h-[450px] rounded-md border-[1px] absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
+    <div
+      className="flex w-[450px] h-[450px] rounded-md absolute left-[50%] top-[50%]"
+      style={{
+        transform: `translate(-50%, -${size == 1 ? 42 : 48}%) scale(${
+          size == 1 ? 0.8 : 0.6
+        })`,
+      }}
+    >
       <div
         className="flex w-full h-full"
         style={{
