@@ -1,27 +1,35 @@
 import Image from "next/image"
 import NewCard from "../Calculate/newcard"
+import { useRef, useState, useEffect } from "react"
 
 const Landing = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [scrollPosition, setScrollPosition] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (containerRef.current) {
+        const { scrollTop } = containerRef.current
+        setScrollPosition(scrollTop)
+      }
+    }
+
+    if (containerRef.current) {
+      containerRef.current.addEventListener("scroll", handleScroll)
+    }
+
+    return () => {
+      if (containerRef.current) {
+        containerRef.current.removeEventListener("scroll", handleScroll)
+      }
+    }
+  }, [])
+  console.log(scrollPosition)
   return (
-    <div className="flex flex-col w-full h-fit">
-      {/* <span className="text-[32px]">วิธีการเคลมประกัน</span>
-      <span className="text-[14px] mt-[8px]">
-        อธิบายวิธีการเคลมประกัน e.g. ไม่ว่าคุณจะเกิดอุบัติเหตน้ำท่วม
-        ผู้เชี่ยวชาญด้านการเคลมประกันของเรา พร้อมดูแลคุณทุกที่ ทุกเวลาตลอด 24
-        ชม. ไม่เว้นวันหยุด คุณสามารถแจ้งเคลมประกันออนไลน์ผ่านเว็บไวต์
-        หรือโทรหาเราผ่านสายด่วนแจ้งเคลมประกัน
-        เราเชื่อว่านวัตกรรมที่ล้ำสมัยที่เราพัฒนาอย่างต่อเนื่อง
-        จะช่วยให้การรับประกันภัยเป็นเรื่องง่าย ราคาดี และเชื่อถือได้
-      </span>
-      <div className="flex w-full h-[170px] border-[1px] overflow-hidden relative mt-[24px]">
-        <Image
-          src="/images/land.webp"
-          alt="Picture of the land"
-          layout="fill"
-          objectFit="contain"
-        />
-      </div> */}
-      <NewCard />
+    <div className="w-full h-full max-h-[calc(100vh-75px)] overflow-auto scrollbar-hide">
+      <div className="flex flex-col w-full h-fit relative">
+        <NewCard />
+      </div>
     </div>
   )
 }

@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </Button>
         <Navbar />
       </div>
-      <div className="w-full h-full max-w-[500px] mx-auto pt-[74px]">
+      <div className="w-full h-full mx-auto pt-[74px]">
         <Component {...pageProps} />
       </div>
     </div>
