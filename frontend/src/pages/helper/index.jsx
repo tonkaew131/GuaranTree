@@ -75,7 +75,7 @@ export default function Page() {
         />
         <button
           type="submit"
-          className="h-full bg-indigo-500 rounded text-white p-4 z-50"
+          className="h-full bg-ds-primary rounded text-white p-4 z-50"
         >
           Submit
         </button>

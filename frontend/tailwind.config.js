@@ -25,7 +25,8 @@ module.exports = {
         BaiJamjuree: ["Bai Jamjuree", "sans-serif"],
       },
       colors: {
-        "ds-primary": "#128C12",
+        "ds-secondary": "#614215",
+        "ds-primary": "#67BE4D",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
