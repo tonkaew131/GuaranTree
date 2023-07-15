@@ -11,41 +11,33 @@
 
 ## Build Script
 
-- Frontend:
+- Frontend & Backend:
 
-  1. Build
+  1. Go to `frontend` directory
+
+     ```bash
+     cd frontend
+     ```
+
+  2. Copy `.env.template` to `.env` && Config the key
+
+     ```bash
+     cp .env.template .env
+     ```
+
+  3. Install
+
+     ```bash
+     npm install
+     ```
+
+  4. Build
 
      ```bash
      npm run build
      ```
 
-  2. Start server
-
-     ```bash
-     npm start
-     ```
-
-- Backend:
-
-  1. Update database schema
-
-     ```bash
-     npx prisma db push
-     ```
-
-  2. Generate Prisma Client
-
-     ```bash
-     npx prisma generate
-     ```
-
-  3. Build nestjs
-
-     ```bash
-     npm run build
-     ```
-
-  4. Running server
+  5. Start server
 
      ```bash
      npm start
