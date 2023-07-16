@@ -37,9 +37,14 @@ const Navbar = () => {
                 </SheetTitle> */}
                 <SheetDescription>
                   <Accordion type="single" collapsible className="w-full">
-                    <Link href="/comingsoon">
-                      <span className="text-[14px] font-[500] text-left flex w-full h-[52px] py-[16px]">
-                        คำถามที่พบบ่อย
+                    <Link href="/">
+                      <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
+                        หน้าแรก
+                      </span>
+                    </Link>
+                    <Link href="/">
+                      <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
+                        หน้าแรก
                       </span>
                     </Link>
                   </Accordion>

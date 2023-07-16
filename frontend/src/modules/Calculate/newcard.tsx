@@ -35,7 +35,7 @@ const NewCard = () => {
     const allCarbon = (carbonPerTree * 30) / 1000
     console.log(allCarbon)
     const carbonPrice = 505
-    const result = allCarbon * carbonPrice * (calculateAtom?.size ?? 0)
+    const result = allCarbon * carbonPrice * (calculateAtom?.size ?? 0) * 7
     if (result > 0) setAns(result)
   }
   return (
