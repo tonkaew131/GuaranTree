@@ -19,7 +19,11 @@ export default function Page() {
 
   const inputRef = useRef()
 
-  const sampleChats = ["น้ำท้วมสวน", "โรครากเน่า", "ผลหยุดออก"]
+  const sampleChats = [
+    "น้ำท้วมสวน ทำไงดี?",
+    "โรครากเน่า ทำไงดี?",
+    "ผลหยุดออก ทำไงดี?",
+  ]
 
   function onClickSuggest(suggest) {
     // inputRef.current.defaultValue = suggest
@@ -58,7 +62,9 @@ export default function Page() {
               <div
                 key={i}
                 className={`my-4 rounded ${
-                  message.role !== "user" ? "text-left bg-[#f5f5f5] rounded-[8px] text-black" : "bg-ds-primary mr-0 mx-auto rounded-br-none text-white"
+                  message.role !== "user"
+                    ? "text-left bg-[#f5f5f5] rounded-[8px] text-black"
+                    : "bg-ds-primary mr-0 mx-auto rounded-br-none text-white"
                 } w-fit max-w-[80%] px-4 py-2`}
               >
                 {lines.map((m, idx) => (
@@ -84,12 +90,12 @@ export default function Page() {
             autoComplete="off"
             className=" px-4 p-3 w-full bg-zinc-100"
           />
-          <Image src={qrIcon} alt="Scan me" className="bg-zinc-100 h-full" />
+          {/* <Image src={qrIcon} alt="Scan me" className="bg-zinc-100 h-full" />
           <Image
             src={microphoneIcon}
             alt="Voice to Text"
             className="bg-zinc-100 mx-1"
-          />
+          /> */}
         </div>
 
         <button
