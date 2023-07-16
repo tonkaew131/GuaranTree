@@ -1,8 +1,8 @@
 import { atom } from "jotai"
 
 interface ICalculateAtom {
-  size: number
-  age: number
+  size: number | null
+  age: number | null
 }
 export const CalculateAtom = atom<ICalculateAtom>({
   size: 15,

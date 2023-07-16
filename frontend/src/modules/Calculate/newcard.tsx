@@ -23,7 +23,9 @@ const NewCard = () => {
     const carbonPerTree =
       //   78.56374431365006 / (1 + 16.986323367601884 * exp(0.644244077212348 * x))
       // calculateAtom.age > 0 ? 8.7637 * calculateAtom.age - 1.2965 : 0
-      calculateAtom.age > 0
+      calculateAtom.age == null
+        ? 0
+        : calculateAtom.age > 0
         ? 78.56374431365006 /
           (1 +
             16.986323367601884 *
@@ -33,7 +35,7 @@ const NewCard = () => {
     const allCarbon = (carbonPerTree * 30) / 1000
     console.log(allCarbon)
     const carbonPrice = 505
-    const result = allCarbon * carbonPrice * calculateAtom.size
+    const result = allCarbon * carbonPrice * (calculateAtom?.size ?? 0)
     if (result > 0) setAns(result)
   }
   return (
@@ -72,11 +74,11 @@ const NewCard = () => {
               type="number"
               placeholder="10 ปี"
               className="w-full"
-              value={calculateAtom.age}
+              value={calculateAtom.age ?? ""}
               onChange={(e) =>
                 setCalculateAtom({
                   ...calculateAtom,
-                  age: Number(e.target.value),
+                  age: e.target.value ? Number(e.target.value) : null,
                 })
               }
             />
@@ -92,17 +94,25 @@ const NewCard = () => {
           type="number"
           placeholder="ไร่"
           className="w-full"
-          value={calculateAtom.size}
+          value={calculateAtom.size ?? ""}
           onChange={(e) =>
             setCalculateAtom({
               ...calculateAtom,
-              size: Number(e.target.value),
+              size: e.target.value ? Number(e.target.value) : null,
             })
           }
         />
         <div className="flex h-[220px] w-full relative bg-[rgba(115.81,83.77,35.71,0.47)] mt-[16px] rounded-lg overflow-hidden">
           <Land
-            size={calculateAtom.size > 20 ? 3 : calculateAtom.size > 10 ? 2 : 1}
+            size={
+              calculateAtom.size == null
+                ? 1
+                : calculateAtom.size > 20
+                ? 3
+                : calculateAtom.size > 10
+                ? 2
+                : 1
+            }
             ans={ans}
           />
           <span
