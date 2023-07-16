@@ -28,6 +28,7 @@ RUN pnpm build
 FROM node:lts-alpine3.16 AS runner
 WORKDIR /app
 
+ENV NODE_TLS_REJECT_UNAUTHORIZED 0
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
 
