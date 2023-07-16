@@ -64,14 +64,10 @@ export default function Footer() {
           © 2023 Untitled UI. All rights reserved.
         </div>
         <div className="flex gap-2">
-          <Link href="https://google.com">
-            <Image
-              src={Facebook}
-              alt="Garantree Facebook"
-              className="h-10 w-10"
-            />
+          <Link href="https://www.facebook.com/profile.php?id=100094419506720">
+            <Image src={Facebook} alt="facebook" className="h-10 w-10" />
           </Link>
-          <Link href="https://google.com">
+          <Link href="https://line.me/ti/p/@451zlmap">
             <Image src={Line} alt="Garantree Line" className="h-10 w-10" />
           </Link>
 
