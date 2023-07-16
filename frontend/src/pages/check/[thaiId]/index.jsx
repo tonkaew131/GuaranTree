@@ -1,7 +1,9 @@
 import { useRouter } from "next/router"
 import Link from "next/link"
 
-import { Skeleton } from "@/components/ui/skeleton"
+// import { Skeleton } from "@/components/ui/skeleton"
+
+import Map from "../../search/map/index"
 
 export default function Page() {
   const router = useRouter()
@@ -10,7 +12,7 @@ export default function Page() {
   if (thaiId == undefined || thaiId.length != 13) {
     return (
       <>
-        <div className="w-4/5 mx-auto flex justify-center items-center flex-col min-h-screen -m-8">
+        <div className="w-3/5 mx-auto flex justify-center items-center flex-col min-h-screen -m-8">
           <h1 className="text-center text-2xl py-4">
             กรุณากรอกเลขบัตรประชาชนให้ครบ 13 หลัก
           </h1>
@@ -26,14 +28,7 @@ export default function Page() {
 
   return (
     <>
-      {[1, 2].map((e) => {
-        return (
-          <div className="py-4" key={e}>
-            <Skeleton className="w-[150px] h-[25px] rounded-full" />
-            <Skeleton className="w-full aspect-[9/10] rounded-md mt-2" />
-          </div>
-        )
-      })}
+      <Map />
     </>
   )
 }

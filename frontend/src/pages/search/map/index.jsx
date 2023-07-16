@@ -9,9 +9,10 @@ import MapContext from "../../../modules/MapContext"
 import { useEffect, useRef, useState } from "react"
 
 import { useRouter } from "next/router"
+
 import Link from "next/link"
 
-export default function Page() {
+export default function Page(props) {
   const mapRef = useRef()
   const [map, setMap] = useState(null)
 
@@ -20,7 +21,7 @@ export default function Page() {
   const router = useRouter()
 
   const sampleLocations = {
-    0: [11132520, 1547500],
+    0: [11132520, 1547400],
     1: [11332720, 1550400],
     2: [11132520, 1547500],
   }
@@ -55,7 +56,7 @@ export default function Page() {
         center:
           parcel in sampleLocations
             ? sampleLocations[parcel]
-            : [11132520, 1547500],
+            : sampleLocations[0],
         zoom: 17,
       }),
     })
@@ -70,7 +71,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="w-screen h-screen relative">
+      <div className="w-screen h-[calc(100vh_-_64px)] relative">
         <MapContext.Provider value={{ map }}>
           <div
             ref={mapRef}
@@ -79,33 +80,42 @@ export default function Page() {
           ></div>
         </MapContext.Provider>
 
-        <div className="absolute p-4 rounded w-full max-w-sm text-2xl bg-black z-10 text-white left-1/2 -translate-x-1/2 bottom-0 sm:bottom-[50px]">
-          <p className="leading-none">โฉนดเลขที่: {router.query.parcel}</p>
+        {/* <div className="absolute p-4 rounded w-full max-w-sm text-2xl bg-black z-10 text-white left-1/2 -translate-x-1/2 bottom-0 sm:bottom-[50px]">
+          <p className="leading-none">
+            โฉนดเลขที่:{" "}
+            {router.query.parcel || Math.round(Math.random() * 100 + 10)}
+          </p>
           <span className="font-light text-sm leading-none">
             บางรักใหญ่, นนทบุรี 11110
           </span>
-        </div>
+        </div> */}
 
-        <div className="absolute top-4 left-4 ">
-          <Link href="/search">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-4/5 sm:left-4 sm:w-auto sm:-translate-x-0">
+          {/* <Link href="/search">
             <button className="bg-indigo-500 text-white px-6 rounded-full py-2">
               Back
             </button>
-          </Link>
+          </Link> */}
 
-          <div className="pl-8 bg-white p-2 my-4 rounded">
+          <div className="pl-8 bg-white p-2 my-4 rounded-[8px]">
             <ul className="list-disc">
-              <li>ตำบล: บางขุนศรี</li>
-              <li>อำเภอ: บางกอกน้อย</li>
-              <li>จังหวัด: กรุงเทพมหานคร</li>
+              <li>123/32 บางขุนศรี บางกอกน้อย กรุงเทพมหานคร</li>
               <li className="my-2">
                 เนื้อที่:{" "}
                 <span className="bg-zinc-900 text-white px-2 py-1">
-                  {randomRais.toFixed(1)} ไร่ 3 งาน 68.8 ตารางวา
+                  {randomRais.toFixed(1)} ไร่ 3 งาน 68.8 ตร.วา
                 </span>
               </li>
               <li className="font-bold text-green-500">
                 ~ {(randomRais * 32.4).toFixed(0)} ต้น
+              </li>
+              <li className="pt-1">
+                เบี้ยประกัน: 100,000 บาท{" "}
+                <Link href="/claim" className="ml-1">
+                  <button className="underline">
+                    เครม
+                  </button>
+                </Link>
               </li>
             </ul>
           </div>
