@@ -112,9 +112,7 @@ export default function Page(props) {
               <li className="pt-1">
                 เบี้ยประกัน: 100,000 บาท{" "}
                 <Link href="/claim" className="ml-1">
-                  <button className="underline">
-                    เครม
-                  </button>
+                  <button className="underline">เคลม</button>
                 </Link>
               </li>
             </ul>
