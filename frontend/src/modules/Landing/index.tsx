@@ -144,7 +144,7 @@ const Landing = () => {
         <div className="flex flex-col w-full h-fit bg-[#67BE4D] pb-[20px]">
           <Helping scrollPosition={scrollPosition} />
         </div>
-        <div className="w-full h-fit bg-white pt-[40px]">
+        <div className="w-full h-fit bg-white py-[40px]">
           <Sponsor />
           <div className="flex flex-col w-full h-fit relative max-w-[500px] mx-auto">
             <NewCard />
