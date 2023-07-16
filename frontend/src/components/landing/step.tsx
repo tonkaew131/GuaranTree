@@ -20,10 +20,10 @@ export default function Step() {
             />
           </div>
           <div className="flex flex-col w-full h-[92px] bg-white z-[-10] ml-[-25px] rounded-md items-start pl-[30px] justify-center">
-            <span className="text-[36px] font-Athiti leading-[43.20px] font-[700] text-[#67BE4D]">
+            <span className="text-[30px] sm:text-[36px] font-Athiti leading-[43.20px] font-[700] text-[#67BE4D]">
               ลองประเมิน
             </span>
-            <span className="text-[26px] font-Athiti mt-[-10px] font-[600]">
+            <span className="text-[22px] sm:text-[26px] font-Athiti mt-[-10px] font-[600]">
               ผลราคาที่ดิน
             </span>
           </div>
@@ -38,10 +38,10 @@ export default function Step() {
             />
           </div>
           <div className="flex flex-col w-full h-[120px] bg-white z-[-10] ml-[-25px] rounded-md items-start pl-[30px] justify-center">
-            <span className="text-[36px] font-Athiti leading-[43.20px] font-[700] text-[#67BE4D]">
+            <span className="text-[30px] sm:text-[36px] font-Athiti leading-[43.20px] font-[700] text-[#67BE4D]">
               ลงทะเบียน
             </span>
-            <span className="text-[26px] font-Athiti mt-[5px] font-[600] leading-[23px] text-left">
+            <span className="text-[22px] sm:text-[26px] font-Athiti mt-[5px] font-[600] leading-[23px] text-left">
               ผ่านไลน์ @guaranTree
             </span>
           </div>
@@ -56,10 +56,10 @@ export default function Step() {
             />
           </div>
           <div className="flex flex-col w-full h-[92px] bg-white z-[-10] ml-[-25px] rounded-md items-start pl-[30px] justify-center">
-            <span className="text-[36px] font-Athiti leading-[43.20px] font-[700] text-[#67BE4D]">
+            <span className="text-[30px] sm:text-[36px] font-Athiti leading-[43.20px] font-[700] text-[#67BE4D]">
               รับประกัน
             </span>
-            <span className="text-[24px] font-Athiti mt-[5px] font-[600] leading-[23px] text-left">
+            <span className="text-[20px] sm:text-[24px] font-Athiti mt-[5px] font-[600] leading-[23px] text-left">
               เมื่อภัยธรรมชาติมา
             </span>
           </div>
