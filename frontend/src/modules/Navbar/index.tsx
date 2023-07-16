@@ -82,14 +82,22 @@ const Navbar = () => {
                     </AccordionItem>
                     <SheetClose asChild>
                       <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
-                        <Link href="/calculate" className="w-full h-full">
+                        <Link
+                          href="/calculate"
+                          className="w-full h-full"
+                          onClick={() => setOpen(false)}
+                        >
                           ประมวลผลตอบแทน
                         </Link>
                       </span>
                     </SheetClose>
                     <SheetClose asChild>
                       <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
-                        <Link href="/" className="w-full h-full">
+                        <Link
+                          href="/"
+                          className="w-full h-full"
+                          onClick={() => setOpen(false)}
+                        >
                           แชท
                         </Link>
                       </span>
