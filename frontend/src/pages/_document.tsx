@@ -7,6 +7,9 @@ export default function Document() {
         <title>GuaranTree</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+        {/* PWA */}
+        <link rel="manifest" href="/manifest.json" />
+
         <meta property="og:title" content="การันTree" />
         <meta
           property="og:description"
