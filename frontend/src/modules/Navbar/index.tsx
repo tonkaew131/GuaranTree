@@ -23,11 +23,12 @@ const Navbar = () => {
   useEffect(() => {
     setInitialState(true)
   }, [])
+  const [open, setOpen] = useState(false)
   return (
     <>
       {initialState && (
         <Button variant="ghost" className="px-[3px] text-[14px] font-[600]">
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger>
               <Burger />
             </SheetTrigger>
@@ -38,37 +39,45 @@ const Navbar = () => {
                 </SheetTitle> */}
                 <SheetDescription>
                   <Accordion type="single" collapsible className="w-full">
-                    <SheetClose asChild>
-                      <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
-                        <Link href="/" className="w-full h-full">
-                          หน้าแรก
-                        </Link>
-                      </span>
-                    </SheetClose>
+                    <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
+                      <Link
+                        href="/"
+                        className="w-full h-full"
+                        onClick={() => setOpen(false)}
+                      >
+                        หน้าแรก
+                      </Link>
+                    </span>
                     <AccordionItem value="item-2">
                       <AccordionTrigger>กรมธรรม์</AccordionTrigger>
                       <AccordionContent>
-                        <SheetClose asChild>
-                          <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
-                            <Link href="/register" className="w-full h-full">
-                              ลงทะเบียน
-                            </Link>
-                          </span>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
-                            <Link href="/check" className="w-full h-full">
-                              ตรวจสอบ
-                            </Link>
-                          </span>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
-                            <Link href="/claim" className="w-full h-full">
-                              เคลม
-                            </Link>
-                          </span>
-                        </SheetClose>
+                        <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
+                          <Link
+                            href="/register"
+                            className="w-full h-full"
+                            onClick={() => setOpen(false)}
+                          >
+                            ลงทะเบียน
+                          </Link>
+                        </span>
+                        <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
+                          <Link
+                            href="/check"
+                            className="w-full h-full"
+                            onClick={() => setOpen(false)}
+                          >
+                            ตรวจสอบ
+                          </Link>
+                        </span>
+                        <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
+                          <Link
+                            href="/claim"
+                            className="w-full h-full"
+                            onClick={() => setOpen(false)}
+                          >
+                            เคลม
+                          </Link>
+                        </span>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
