@@ -21,7 +21,7 @@ export default function Sponsor() {
   }
 
   return (
-    <section className="font-Athiti w-full font-semibold text-ds-secondary text-4xl text-center">
+    <section className="font-Athiti w-full font-semibold text-ds-secondary text-4xl text-center max-w-[100vw] overflow-clip">
       <h2>
         ได้รับการรองรับ
         <br />
@@ -55,11 +55,13 @@ export default function Sponsor() {
           }}
         ></div> */}
 
-        <Image
-          src={placeholder}
-          alt="Sponsor Section"
-          className="object-cover w-full scale-150 sm:scale-100 py-8 sm:py-0"
-        />
+        <div className="w-screen max-w-full overflow-clip">
+          <Image
+            src={placeholder}
+            alt="Sponsor Section"
+            className="object-cover w-full scale-150 sm:scale-100 py-8 sm:py-0 max-w-[100vw]"
+          />
+        </div>
       </div>
     </section>
   )
