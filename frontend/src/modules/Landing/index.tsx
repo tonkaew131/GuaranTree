@@ -110,7 +110,7 @@ const Landing = () => {
             width: "100vw",
             left: "5vw",
             top: `${
-              scrollPosition > 300 ? 325 - (scrollPosition - 300) * 1 : 325
+              scrollPosition > 300 ? 275 - (scrollPosition - 300) * 1 : 275
             }px`,
           }}
         >
@@ -139,12 +139,12 @@ const Landing = () => {
           </div>
         </div>
         <div
-          className="flex h-[180px] fixed z-[-10]"
+          className="flex h-[230px] fixed z-[-10]"
           style={{
-            width: "100vw",
+            width: "180vw",
             left: "0vw",
             top: `${
-              scrollPosition > 300 ? 50 - (scrollPosition - 300) * 1 : 50
+              scrollPosition > 300 ? 0 - (scrollPosition - 300) * 1 : 0
             }px`,
           }}
         >
