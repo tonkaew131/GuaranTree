@@ -54,7 +54,7 @@ export default function Page() {
             })}
           </div>
         )}
-        <div className="">
+        <div className="pb-24">
           {messages.map((message, i) => {
             const lines = message.content.split("\n")
 
@@ -77,7 +77,7 @@ export default function Page() {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="absolute bottom-2 p-2 px-4 left-1/2 -translate-x-1/2 w-full flex gap-2"
+        className="fixed bottom-2 p-2 px-4 left-1/2 -translate-x-1/2 w-full flex gap-2"
       >
         <div className="bg-zinc-100 rounded-[8px] border-2 flex w-full max-w-xl mx-auto mr-0">
           <input
