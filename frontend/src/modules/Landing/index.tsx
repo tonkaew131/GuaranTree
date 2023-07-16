@@ -70,7 +70,7 @@ const Landing = () => {
           <Image src="/images/Line.png" alt="Picture of the land" fill />
         </div>
         <div
-          className="flex h-[100vh] fixed z-[-10]"
+          className="flex h-[100vh] fixed z-[-10] transition-all duration-[0.01s]"
           style={{
             width: `calc(${100 - scrollPosition / 3}vw + 200px)`,
             left: "-200px",
@@ -87,7 +87,7 @@ const Landing = () => {
           />
         </div>
         <div
-          className="flex h-[100vh] fixed top-[64px] z-[-20]"
+          className="flex h-[100vh] fixed top-[64px] z-[-20] transition-all duration-[0.01s]x"
           style={{
             width: "100vw",
             left: "0vw",
