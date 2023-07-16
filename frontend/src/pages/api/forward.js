@@ -4,8 +4,17 @@ export default async function handler(req, res) {
       new URLSearchParams(req.query)
   )
 
+  const contentType = redirectReq.headers.get("content-type")
+
+  if (contentType.includes("image")) {
+    return res
+      .status(200)
+      .setHeader("content-type", contentType)
+      .send(Buffer.from(await redirectReq.arrayBuffer()))
+  }
+
   return res
     .status(200)
-    .setHeader("content-type", "image/png")
-    .send(Buffer.from(await redirectReq.arrayBuffer()))
+    .setHeader("content-type", contentType)
+    .send(Buffer.from(await redirectReq.text()))
 }
