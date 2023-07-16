@@ -42,7 +42,7 @@ export default function Page(props) {
       }),
       new TileLayer({
         source: new TileWMS({
-          url: "/api/forward",
+          url: "http://bpt.dol.go.th:8088/geoserver/DOLNSL/wms",
           params: { LAYERS: "nsl_200323_wgs84" },
           serverType: "geoserver",
           transition: 0,
