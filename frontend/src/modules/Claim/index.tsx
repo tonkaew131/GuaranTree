@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Footer from "../Footer"
 
 const Claim = () => {
   return (
@@ -99,6 +100,7 @@ const Claim = () => {
           <span className="font-Athiti ml-[10px] text-[20px]">โทรเลย</span>
         </Button>
       </div>
+      <Footer />
     </div>
   )
 }
