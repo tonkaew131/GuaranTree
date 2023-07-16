@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 import Icon from "@/../public/images/ct-b-down.png"
-import placeholder from "@/../public/images/sposor.webp"
+import placeholder from "@/../public/images/sponsor.webp"
 
 import TWA from "@/../public/TWA_sponsor.svg"
 
@@ -55,7 +55,11 @@ export default function Sponsor() {
           }}
         ></div> */}
 
-        <Image src={placeholder} alt="Sponsor Section" />
+        <Image
+          src={placeholder}
+          alt="Sponsor Section"
+          className="object-cover w-full scale-150 sm:scale-100 py-8 sm:py-0"
+        />
       </div>
     </section>
   )
