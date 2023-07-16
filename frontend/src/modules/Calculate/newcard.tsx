@@ -86,7 +86,7 @@ const NewCard = () => {
           htmlFor="text"
           className="text-left text-[14px] font-[400] mr-auto mb-[8px]"
         >
-          อายุของต้นทุเรียน
+          จำนวนไร่
         </Label>
         <Input
           type="number"
