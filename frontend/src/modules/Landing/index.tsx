@@ -110,7 +110,7 @@ const Landing = () => {
             width: "100vw",
             left: "5vw",
             top: `${
-              scrollPosition > 300 ? 380 - (scrollPosition - 300) * 1 : 380
+              scrollPosition > 300 ? 325 - (scrollPosition - 300) * 1 : 325
             }px`,
           }}
         >
