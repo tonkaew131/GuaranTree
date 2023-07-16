@@ -4,6 +4,17 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <title>GuaranTree</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+        <meta property="og:title" content="การันTree" />
+        <meta
+          property="og:description"
+          content="การันTree ครอบคลุมทุกภัยพิบัติ ไม่มีค่าใช้จ่าย สมัครง่าย"
+        />
+        <meta property="og:image" content="/images/preview.webp" />
+        <meta name="theme-color" content="#67BE4D" />
+        <meta property="og:url" content="https://www.group-f.ywc.in.th/" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
