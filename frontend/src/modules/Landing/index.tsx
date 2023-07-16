@@ -112,7 +112,7 @@ const Landing = () => {
         </div>
       </div>
       <Button
-        className="flex mt-[1100px] mb-[40px] h-[60px] w-[340px] max-w-[90%] ml-[18px] bg-[#67BE4D] hover:bg-[#457536] z-[5]"
+        className="flex mt-[1120px] mb-[40px] h-[60px] w-[340px] max-w-[90%] ml-[18px] bg-[#67BE4D] hover:bg-[#457536] z-[5]"
         onClick={toBottom}
       >
         ลองทำนายที่ดินดูเลย
@@ -174,7 +174,7 @@ const Landing = () => {
               <span className="text-[36px] font-Athiti leading-[43.20px] font-[700] text-[#67BE4D]">
                 รับประกัน
               </span>
-              <span className="text-[26px] font-Athiti mt-[5px] font-[600] leading-[23px] text-left">
+              <span className="text-[24px] font-Athiti mt-[5px] font-[600] leading-[23px] text-left">
                 เมื่อภัยธรรมชาติมา
               </span>
             </div>

@@ -106,7 +106,7 @@ const NewCard = () => {
             ans={ans}
           />
           <span
-            className="text-[36px] font-Athiti font-[700] z-50 absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-white"
+            className="text-[33px] w-full font-Athiti font-[700] z-50 absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-white"
             style={{
               transition: "all 0.5s ease",
               opacity: ans > 0 ? 1 : 0,
