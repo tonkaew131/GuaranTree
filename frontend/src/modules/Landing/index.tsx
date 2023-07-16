@@ -31,11 +31,18 @@ const Landing = () => {
       }
     }
   }, [])
-
   const toBottom = () => {
     if (containerRef.current) {
       containerRef.current.scrollTo({
-        top: 10000,
+        top: 1100,
+        behavior: "smooth",
+      })
+    }
+  }
+  const toBottom2 = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        top: 2600,
         behavior: "smooth",
       })
     }
@@ -58,15 +65,15 @@ const Landing = () => {
         <div
           className="flex h-[100vh] fixed z-[-10]"
           style={{
-            width: `${100 - scrollPosition / 3}vw`,
-            left: "0",
+            width: `calc(${100 - scrollPosition / 3}vw + 200px)`,
+            left: "-200px",
             top: `${
               scrollPosition > 300 ? 64 - (scrollPosition - 300) * 1 : 64
             }px`,
           }}
         >
           <Image
-            src="/images/TreeWild.webp"
+            src="/images/TreeWild5.webp"
             alt="Picture of the land"
             className="object-cover object-left"
             fill
@@ -91,7 +98,7 @@ const Landing = () => {
         </div>
 
         <div
-          className="flex h-[180px] fixed top-[64px] z-[-10]"
+          className="flex h-[180px] fixed z-[-10]"
           style={{
             width: "100vw",
             left: "0vw",
@@ -114,16 +121,23 @@ const Landing = () => {
             <span className="font-Athiti text-[20px] font-[500] text-white px-[18px] mt-[12px]">
               ครอบคลุมทุกภัยพิบัติ ไม่มีค่าใช้จ่าย สมัครง่าย
             </span>
+            <div className="flex h-[0px] lg:h-[100px]"></div>
           </div>
         </div>
         <Button
-          className="flex mt-[1120px] mb-[40px] h-[60px] w-[340px] max-w-[90%] ml-[18px] bg-[#67BE4D] hover:bg-[#457536] z-[5]"
+          className="flex mt-[1120px] mb-[40px] h-[60px] w-[340px] max-w-[90%] ml-[18px] bg-[#67BE4D] hover:bg-[#457536] z-[5] text-[23px]"
           onClick={toBottom}
         >
-          ลองทำนายที่ดินดูเลย
+          ลองใช้ การันTree
         </Button>
         <div className="flex w-full h-[100vh] bg-black fixed top-[0px] z-[-30]" />
         <Step />
+        <Button
+          className="flex mb-[40px] mt-[10px] h-[60px] w-[calc(100%-80px)] max-w-[813px] mx-auto bg-[#67BE4D] hover:bg-[#457536] z-[5] text-[23px]"
+          onClick={toBottom2}
+        >
+          ตรวจสอบวงเงินประกัน
+        </Button>
         <div className="relative flex w-full h-[100px] z-[-10] mb-[-2px]">
           <Image src="/images/CurveBar.png" alt="Picture of the land" fill />
         </div>

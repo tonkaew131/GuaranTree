@@ -1,8 +1,9 @@
 import Image from "next/image"
+import { Button } from "../ui/button"
 
 export default function Step() {
   return (
-    <section className="flex w-full h-fit flex-col px-[18px] items-center text-center pb-[150px] max-w-4xl mx-auto">
+    <section className="flex w-full h-fit flex-col px-[18px] items-center text-center pb-[10px] max-w-4xl mx-auto">
       <span className="text-white text-[36px] font-[700] font-Athiti leading-[43.2px]">
         <span className="text-[#67BE4D]">การันTree</span> ใช้ฟรี!
         <br />
