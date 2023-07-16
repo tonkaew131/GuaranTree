@@ -6,7 +6,7 @@ const Claim = () => {
   return (
     <div className="flex flex-col w-full h-fit mx-auto">
       <p className="text-white bg-[#295729] py-2 pl-6">
-        หน้าแรก &gt;&gt; เคลมประกัน
+        หน้าแรก &gt;&gt; ลงทะเบียน
       </p>
       <div className="flex flex-col h-fit bg-[#67be4d] px-[34px] items-center">
         <div className=" flex flex-col max-w-[700px] min-w-[200px] w-4/5 sm:py-24">
