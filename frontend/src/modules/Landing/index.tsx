@@ -28,14 +28,26 @@ const Landing = () => {
     }
   }, [])
 
-  console.log(scrollPosition)
+  const toBottom = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        top: 10000,
+        behavior: "smooth",
+      })
+    }
+  }
 
   return (
     <div
       className="w-full h-full max-h-[calc(100vh-75px)] overflow-auto scrollbar-hide relative"
       ref={containerRef}
     >
-      <div className="w-[60px] h-[60px] fixed right-[30px] bottom-[50px] z-[100] hover:opacity-70 cursor-pointer rounded-full shadow-lg">
+      <div
+        className="w-[60px] h-[60px] fixed right-[30px] bottom-[50px] z-[100] hover:opacity-70 cursor-pointer rounded-full shadow-lg"
+        onClick={() => {
+          window.location.href = "https://line.me/ti/p/@451zlmap"
+        }}
+      >
         <Image src="/images/Line.png" alt="Picture of the land" fill />
       </div>
       <div
@@ -97,13 +109,16 @@ const Landing = () => {
           <span className="font-Athiti text-[20px] font-[500] text-white px-[18px] mt-[12px]">
             ครอบคลุมทุกภัยพิบัติ ไม่มีค่าใช้จ่าย สมัครง่าย
           </span>
-          <Button className="flex h-[60px] w-[340px] max-w-[90%] ml-[18px] mt-[10px] bg-[#67BE4D] hover:bg-[#457536]">
-            ลองทำนายที่ดินดูเลย
-          </Button>
         </div>
       </div>
+      <Button
+        className="flex mt-[1100px] mb-[40px] h-[60px] w-[340px] max-w-[90%] ml-[18px] bg-[#67BE4D] hover:bg-[#457536] z-[5]"
+        onClick={toBottom}
+      >
+        ลองทำนายที่ดินดูเลย
+      </Button>
       <div className="flex w-full h-[100vh] bg-black fixed top-[0px] z-[-30]" />
-      <div className="flex w-full h-fit mt-[1170px] flex-col px-[18px] items-center text-center pb-[150px]">
+      <div className="flex w-full h-fit flex-col px-[18px] items-center text-center pb-[150px]">
         <span className="text-white text-[36px] font-[700] font-Athiti leading-[43.2px]">
           <span className="text-[#67BE4D]">การันTree</span> ใช้ฟรี!
           <br />
