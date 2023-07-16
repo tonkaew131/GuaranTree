@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className="flex w-full h-[64px] items-center justify-center px-[24px] fixed top-0 z-[10] bg-white">
         <div className="mr-auto">
           <Image
-            src="/images/ct-b-down.png"
+            src="/images/LOGO.png"
             alt="Picture of the land"
             width={32}
             height={32}
