@@ -6,6 +6,7 @@ import Helping from "@/components/landing/helping"
 import Sponsor from "@/components/landing/sponsor"
 import Step from "@/components/landing/step"
 import Head from "next/head"
+import Footer from "../Footer"
 
 const Landing = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -149,7 +150,8 @@ const Landing = () => {
             <NewCard />
           </div>
         </div>
-        <div className="flex w-full h-[150px] bg-[#295729]"></div>
+
+        <Footer />  
       </div>
     </>
   )
