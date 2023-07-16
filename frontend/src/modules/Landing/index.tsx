@@ -177,7 +177,7 @@ const Landing = () => {
           className="flex mb-[40px] mt-[10px] h-[60px] w-[calc(100%-80px)] max-w-[813px] mx-auto bg-[#67BE4D] hover:bg-[#457536] z-[5] text-[23px]"
           onClick={toBottom2}
         >
-          ตรวจสอบวงเงินประกัน
+          ลองประเมินผลตอบแทน
         </Button>
         <div className="relative flex w-full h-[100px] z-[-10] mb-[-2px]">
           <Image src="/images/CurveBar.png" alt="Picture of the land" fill />
