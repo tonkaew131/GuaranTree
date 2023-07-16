@@ -25,9 +25,7 @@ export default function Footer() {
                 เกี่ยวกับการันTREE
               </AccordionTrigger>
             </Link>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
+            <AccordionContent></AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-ds-primary">
@@ -35,16 +33,16 @@ export default function Footer() {
             </AccordionTrigger>
             <AccordionContent>
               <ul>
-                <li>
+                <li className="py-1">
                   <Link href="faq">คำถามที่พบบ่อย</Link>
                 </li>
-                <li>
+                <li className="py-1">
                   <Link href="insurance">บริการด้านกรมธรรม์</Link>
                 </li>
-                <li>
+                <li className="py-1">
                   <Link href="claim">การเรียกร้องสินไหม</Link>
                 </li>
-                <li>
+                <li className="py-1">
                   <Link href="payment">ช่องทางการชำระเบี้ยประกันภัย</Link>
                 </li>
               </ul>
