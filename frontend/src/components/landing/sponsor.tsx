@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 import Icon from "@/../public/images/ct-b-down.png"
-import placeholder from "@/../public/images/sponsor.webp"
+import placeholder from "@/../public/images/sponsor.png"
 
 import TWA from "@/../public/TWA_sponsor.svg"
 

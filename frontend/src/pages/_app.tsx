@@ -30,7 +30,12 @@ export default function App({ Component, pageProps }: AppProps) {
             />
           </Link>
         </div>
-        <Button className="bg-green-700 hover:bg-green-700 mr-[17px]">
+        <Button
+          className="bg-green-700 hover:bg-green-700 mr-[17px]"
+          onClick={() => {
+            window.location.href = "https://line.me/ti/p/@451zlmap"
+          }}
+        >
           ติดต่อเรา
         </Button>
         <Navbar />
