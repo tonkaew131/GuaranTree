@@ -1,0 +1,16 @@
+{
+    "name": "การันTree",
+    "short_name": "การันTree",
+    "start_url": "/calculate",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#67BE4D",
+    "icons": [
+        {
+            "src": "/app_icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}
