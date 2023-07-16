@@ -11,7 +11,7 @@ const Claim = () => {
             <br />
             เพื่อขอเคลม
           </span>
-          <div className="flex w-full h-[150px] relative overflow-hidden rounded-md mt-[14px]">
+          <div className="flex w-full h-[200px] relative overflow-hidden rounded-md mt-[14px]">
             <Image
               src="/images/TreeColor.png"
               alt="Picture of the land"
