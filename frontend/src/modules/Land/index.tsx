@@ -1,13 +1,15 @@
 import Image from "next/image"
 
-const Land = ({ size }: { size: number }) => {
+const Land = ({ size, ans }: { size: number; ans: number }) => {
+  const zoom = ans > 0 ? 2.5 : 1
   return (
     <div
-      className="flex w-[450px] h-[450px] rounded-md absolute left-[50%] top-[50%]"
+      className="flex w-[450px] h-[450px] rounded-md absolute left-[50%] top-[50%] transition-all duration-1000"
       style={{
         transform: `translate(-50%, -${size == 1 ? 42 : 48}%) scale(${
-          size == 1 ? 0.8 : 0.6
+          zoom * (size == 1 ? 0.8 : 0.6)
         })`,
+        filter: `blur(${ans > 0 ? 10 : 0}px) brightness(${ans > 0 ? 0.5 : 1})`,
       }}
     >
       <div

@@ -11,9 +11,31 @@ import { useAtom } from "jotai"
 import { CalculateAtom } from "./atom"
 import Land from "../Land"
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
 
 const NewCard = () => {
   const [calculateAtom, setCalculateAtom] = useAtom(CalculateAtom)
+
+  const [ans, setAns] = useState(0)
+
+  const onCLick = () => {
+    console.log(calculateAtom)
+    const carbonPerTree =
+      //   78.56374431365006 / (1 + 16.986323367601884 * exp(0.644244077212348 * x))
+      // calculateAtom.age > 0 ? 8.7637 * calculateAtom.age - 1.2965 : 0
+      calculateAtom.age > 0
+        ? 78.56374431365006 /
+          (1 +
+            16.986323367601884 *
+              Math.exp(-0.644244077212348 * calculateAtom.age))
+        : 0
+    // kg of carbon weight per all in 1 field
+    const allCarbon = (carbonPerTree * 30) / 1000
+    console.log(allCarbon)
+    const carbonPrice = 505
+    const result = allCarbon * carbonPrice * calculateAtom.size
+    if (result > 0) setAns(result)
+  }
   return (
     <div className="flex h-[668px] w-full px-[24px] py-[16px] flex-col">
       <span className="text-[36px] text-center font-[700] font-Athiti">
@@ -81,11 +103,28 @@ const NewCard = () => {
         <div className="flex h-[220px] w-full relative bg-[rgba(115.81,83.77,35.71,0.47)] mt-[16px] rounded-lg overflow-hidden">
           <Land
             size={calculateAtom.size > 20 ? 3 : calculateAtom.size > 10 ? 2 : 1}
+            ans={ans}
           />
+          <span
+            className="text-[36px] font-Athiti font-[700] z-50 absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-white"
+            style={{
+              transition: "all 0.5s ease",
+              opacity: ans > 0 ? 1 : 0,
+              transitionDuration: "1.5s",
+            }}
+          >
+            ราคาประเมิน
+            <br />
+            วงเงินของคุณ
+            <br />
+            {Number(ans.toFixed(0)).toLocaleString()}&nbsp;บาท
+          </span>
         </div>
       </div>
       <Button className="flex w-full h-[72px] bg-[#67BE4D] hover:bg-[#599b44] mt-[16px] text-[23px]">
-        <span className="text-[23px] font-[500]">ตรวจสอบวงเงินประกัน</span>
+        <span className="text-[23px] font-[500]" onClick={onCLick}>
+          ตรวจสอบวงเงินประกัน
+        </span>
       </Button>
     </div>
   )

@@ -178,7 +178,7 @@ const Landing = () => {
           <NewCard />
         </div>
       </div>
-      <div className="flex w-full h-[150px]"></div>
+      <div className="flex w-full h-[150px] bg-[#295729]"></div>
     </div>
   )
 }
