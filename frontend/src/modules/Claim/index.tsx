@@ -5,19 +5,22 @@ import Footer from "../Footer"
 const Claim = () => {
   return (
     <div className="flex flex-col w-full h-fit mx-auto">
-      <div className="flex flex-col w-full h-fit bg-[#67be4d] px-[34px]">
-        <div className=" flex flex-col max-w-[700px]">
+      <p className="text-white bg-[#295729] py-2 pl-6">
+        หน้าแรก &gt;&gt; เคลมประกัน
+      </p>
+      <div className="flex flex-col h-fit bg-[#67be4d] px-[34px] items-center">
+        <div className=" flex flex-col max-w-[700px] min-w-[200px] w-4/5 sm:py-24">
           <span className="text-[41px] font-Athiti font-[700] text-center leading-[41px] mt-[20px] text-white">
             ติดต่อ
-            <br />
+            <br className="sm:hidden" />
             เพื่อขอเคลม
           </span>
           <div className="flex w-full h-[200px] relative overflow-hidden rounded-md mt-[14px]">
             <Image
-              src="/images/TreeColor.png"
+              src="/registation.svg"
               alt="Picture of the land"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
           <span className="text-[16px] font-[700] text-white bg-[#295729] h-[40px] mt-[16px] rounded-md items-center justify-center flex mb-[16px]">
@@ -25,7 +28,7 @@ const Claim = () => {
           </span>
         </div>
       </div>
-      <div className="flex flex-col w-full h-fit px-[34px]">
+      <div className="flex flex-col h-fit px-[34px] w-fit mx-auto sm:py-24">
         <div className=" flex flex-col max-w-[700px] my-[24px]">
           <span>
             <span className="text-[20px] font-[700] font-Athiti text-[#295729]">
