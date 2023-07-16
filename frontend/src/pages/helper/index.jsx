@@ -5,8 +5,6 @@ import { useRef } from "react"
 import Image from "next/image"
 
 import sendIcon from "./../../../public/send.svg"
-import qrIcon from "./../../../public/qr.svg"
-import microphoneIcon from "./../../../public/microphone.svg"
 
 // Optional but recommended: use the Edge Runtime. This can only be done at the page level, not inside nested components.
 export const runtime = "experimental-edge"
