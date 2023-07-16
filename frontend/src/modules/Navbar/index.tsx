@@ -94,7 +94,7 @@ const Navbar = () => {
                     <SheetClose asChild>
                       <span className="text-[14px] font-[500] text-left flex w-full h-[42px] py-[16px]">
                         <Link
-                          href="/"
+                          href="/helper"
                           className="w-full h-full"
                           onClick={() => setOpen(false)}
                         >
