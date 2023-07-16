@@ -164,7 +164,7 @@ const Landing = () => {
             <span className="font-Athiti text-[20px] font-[500] text-white px-[18px] mt-[12px]">
               ครอบคลุมทุกภัยพิบัติ ไม่มีค่าใช้จ่าย สมัครง่าย
             </span>
-            <div className="flex h-[0px] lg:h-[100px]"></div>
+            <div className="flex h-[50px] lg:h-[100px]"></div>
           </div>
         </div>
         <Button
