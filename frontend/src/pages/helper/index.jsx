@@ -18,9 +18,9 @@ export default function Page() {
   const inputRef = useRef()
 
   const sampleChats = [
-    "น้ำท้วมสวน ทำไงดี?",
+    "น้ำท่วมสวน ทำไงดี?",
     "โรครากเน่า ทำไงดี?",
-    "ผลหยุดออก ทำไงดี?",
+    "ผลทุเรียนหยุดออก ทำไงดี?",
   ]
 
   function onClickSuggest(suggest) {
