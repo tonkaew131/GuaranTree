@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 8080",
+    "start:rpi": "next build && next start -p 3003 -H 0.0.0.0",
     "lint": "next lint"
   },
   "dependencies": {
