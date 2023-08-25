@@ -87,7 +87,7 @@ const Navbar = () => {
                           className="w-full h-full"
                           onClick={() => setOpen(false)}
                         >
-                          ประมวลผลตอบแทน
+                          ประเมินทุนประกัน
                         </Link>
                       </span>
                     </SheetClose>
