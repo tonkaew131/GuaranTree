@@ -36,7 +36,9 @@ const NewCard = () => {
     console.log(allCarbon)
     const carbonPrice = 505
     const result = allCarbon * carbonPrice * (calculateAtom?.size ?? 0) * 7
-    if (result > 0) setAns(result)
+    if (result > 0) {
+      setAns(result * 8)
+    }
   }
   return (
     <div className="flex h-fit w-full px-[24px] py-[0px] flex-col">
@@ -111,10 +113,11 @@ const NewCard = () => {
         <div className="flex flex-row w-full h-fit gap-1">
           <Input type="number" placeholder="เลขที่โฉนด" className="w-full" />
           <Button
-            variant="ghost"
+            variant="outline"
             onClick={() => {
               window.location.href = "/check/v2/123"
             }}
+            className="bg-[#67BE4D] hover:bg-[#599b44]"
           >
             <svg
               width="21"
@@ -125,7 +128,7 @@ const NewCard = () => {
             >
               <path
                 d="M10 15.7053L7 14.2053M7 14.2053L1 17.2053V4.20532L7 1.20532M7 14.2053V1.20532M7 1.20532L13 4.20532M13 4.20532L19 1.20532V8.70532M13 4.20532V9.70532M17 15.2053V15.2153M19.121 17.3263C19.5406 16.9068 19.8265 16.3723 19.9423 15.7903C20.0581 15.2083 19.9988 14.6051 19.7717 14.0568C19.5447 13.5086 19.1602 13.04 18.6668 12.7103C18.1734 12.3807 17.5934 12.2047 17 12.2047C16.4066 12.2047 15.8266 12.3807 15.3332 12.7103C14.8398 13.04 14.4553 13.5086 14.2283 14.0568C14.0012 14.6051 13.9419 15.2083 14.0577 15.7903C14.1735 16.3723 14.4594 16.9068 14.879 17.3263C15.297 17.7453 16.004 18.3713 17 19.2053C18.051 18.3153 18.759 17.6893 19.121 17.3263Z"
-                stroke="#848484"
+                stroke="#ffffff"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -156,9 +159,12 @@ const NewCard = () => {
           >
             ราคาประเมิน
             <br />
-            ทุนประกัน
+            ทุนประกันสูงสุด
             <br />
             {Number(ans.toFixed(0)).toLocaleString()}&nbsp;บาท
+            <span className="text-[10px] absolute bottom-[-20px] right-2">
+              *เงื่อนไขเป็นไปตามที่บริษัทกำหนด
+            </span>
           </span>
         </div>
       </div>

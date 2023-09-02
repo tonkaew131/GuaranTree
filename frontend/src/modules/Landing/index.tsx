@@ -108,9 +108,9 @@ const Landing = () => {
           className="flex h-[180px] fixed z-[-10] animate-pulse duration-500"
           style={{
             width: "100vw",
-            left: "5vw",
+            left: "1vw",
             top: `${
-              scrollPosition > 300 ? 225 - (scrollPosition - 300) * 1 : 225
+              scrollPosition > 300 ? 175 - (scrollPosition - 300) * 1 : 175
             }px`,
           }}
         >
